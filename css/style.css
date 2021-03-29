@@ -49,7 +49,7 @@ button:hover {
 
 .modal {
 	z-index: 20;
-	display: flex;
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -67,6 +67,15 @@ button:hover {
 	background-color: white;
 	position: relative;
 
+}
+
+.popup__close {
+	position: absolute;
+	top: -3rem;
+	right: 0;
+	width: 2rem;
+	border: none;
+	background-color: transparent;
 }
 
 .modalForm {
@@ -131,6 +140,7 @@ button:hover {
 }
 
 .radio {
+
 	position: absolute;
 	clip: rect(1px 1px 1px 1px);
 	height: 1px;
@@ -140,8 +150,11 @@ button:hover {
 /*поле ввода текста*/
 
 .field-textarea {
+	box-sizing: border-box;
 	width: 100%;
+	padding: 2rem 1.5rem;
 	resize: none;
+
 
 }
 	
