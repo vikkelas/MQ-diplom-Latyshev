@@ -45,10 +45,108 @@ button:hover {
 	cursor: pointer;
 }
 
+/*Модальное окно*/
 
+.modal {
+	z-index: 20;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.75);
+	overflow-y: auto;
+}
+
+.modalBlock {
+	box-sizing: border-box; 	
+	max-width: 39rem;	
+	margin: auto;
+	padding: 0 3rem 5rem;
+	background-color: white;
+	position: relative;
+
+}
+
+.modalForm {
+	display: flex;
+	flex-direction: column;
+	font-size: 1.4rem;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-hint {
+	margin-top: 2.5rem;
+	margin-bottom: 1rem; 
+}
+
+.select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	box-sizing: border-box;
+	padding: 1.2rem 1.6rem;
+	color: #707171;
+	display: inline-block;
+	background-image: url(../svg/form-arrows.svg);
+	background-repeat: no-repeat;
+	background-position: right 1.6rem center;
+	background-size: 1rem;
+	background-color: #f4f7f6;
+	border: none;	
+
+}
+
+
+/*Радио кнопки*/
+
+
+
+.radio-group-text::before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 2rem;
+	height: 2rem;
+	background-image: url(../svg/form-empty-circle.svg);
+	background-position: center center;
+	background-size: 2rem;
+	margin-right: 1rem;
+	
+}
+
+
+
+.radio-margin {
+	margin-left: 1.5rem;
+}
+
+
+.radio:checked ~ .radio-group-text::before {
+	background-image: url(../svg/form-circle.svg);
+}
+
+.radio {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px);
+	height: 1px;
+	width: 1px;
+}
+
+/*поле ввода текста*/
+
+.field-textarea {
+	width: 100%;
+	resize: none;
+
+}
 	
 
-
+/*шапка*/
 .header {
 	position: relative;
 	z-index: 0;
